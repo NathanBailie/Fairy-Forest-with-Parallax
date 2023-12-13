@@ -139,3 +139,9 @@ body {
     letter-spacing: calc(var(--index) / 25);
     transition: var(--transition);
 }
+
+.particles {
+    position: absolute;
+    inset: 0;
+    z-index: 1001;
+}
