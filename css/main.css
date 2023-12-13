@@ -5,6 +5,67 @@
     font-family: sans-serif;
 }
 
+:root {
+    --text-color: #f9f9f9;
+}
+
+@font-face {
+    font-family: Railway_Black;
+    src: url('../assets/fonts/raleway-black.woff2');
+}
+
+@font-face {
+    font-family: Railway_Regular;
+    src: url('../assets/fonts/raleway-regular.woff2');
+}
+
 body {
     background: #3c3c3c;
+    font-family: Railway_Regular, sans-serif;
+    color: var( --text-color);
+}
+
+.header {
+    position: relative;
+}
+
+.layers {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.article {
+    min-height: 100vh;
+    background: url('../assets/img/dungeon.jpg') center center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.article__title {
+    text-transform: uppercase;
+}
+
+.article__paragraph {
+    max-width: 460px;
+}
+.layers__base {
+    background: url('../assets/img/base.png') center center/cover no-repeat;
+}
+.layers__middle {
+    background: url('../assets/img/middle.png') center center/cover no-repeat;
+}
+.layers__front {
+    background: url('../assets/img/front.png') center center/cover no-repeat;
 }
