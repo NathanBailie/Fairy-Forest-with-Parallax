@@ -6,7 +6,7 @@ I found the idea for this project in one of the tutorials on [WebDesign Master](
 ### Here you can try this project on the website - [Fairy Forest with Parallax](https://nathanbailie.github.io/Fairy-Forest-with-Parallax/ "Click to visit")
 
 ## Screenshot
-<img src="https://github.com/NathanBailie/Fairy-Forest-with-Parallax/raw/main/assets/screenshots/screenshot.png" width="700" />
+<img src="https://github.com/NathanBailie/Fairy-Forest-with-Parallax/raw/main/assets/screenshots/screenshot1.png" width="700" />
 
 ## Technologies
 * Html (canvas)

@@ -110,6 +110,7 @@ body {
 	color: var(--text-color);
     position: relative;
     --article-transform: translate3d(0, calc(var(--scroll-top) / -7.5), 0);
+	text-shadow: 0 0 15px #166a63;
 }
 
 .article__title {
