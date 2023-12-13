@@ -6,7 +6,8 @@
 }
 
 :root {
-    --text-color: #f9f9f9;
+	--text-color: #f8f9f2;
+    --index: calc(1vw + 1vh);
 }
 
 @font-face {
@@ -22,25 +23,74 @@
 body {
     background: #3c3c3c;
     font-family: Railway_Regular, sans-serif;
-    color: var( --text-color);
 }
 
 .header {
     position: relative;
 }
 
+.header::after {
+    content: '';
+    width: 100%;
+    height: calc(var(--index) * 10);
+    position: absolute;
+    bottom: calc(var(--index) * -4.5);
+    z-index: 100;
+    background: url('../assets/img/ground.png') center center/cover no-repeat;
+}
+
 .layers {
     height: 100vh;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    overflow: hidden;
 }
 
 .layer {
     width: 100%;
     height: 100%;
     position: absolute;
+    will-change: transform;
+    z-index: 2;
+}
+
+.layers__text {
+    z-index: 1;
+    transform: translate3d(0, calc(var(--scroll-top) / 2), 0);
+    text-transform: uppercase;
+    will-change: transform;
+	text-shadow: 0 0 15px #bf9306;
+	color: var(--text-color);
+}
+
+.layers__inscription {
+    font-family: Railway_Black;
+    font-size: calc(var(--index) / 1.18);
+    letter-spacing: calc(var(--index) / 3.5);
+	margin-top: calc(var(--index) * -0.75);
+}
+
+.layers__title {
+    font-family: Railway_Black;
+    font-size: calc(var(--index) * 2.5);
+    letter-spacing: calc(var(--index) / 2.25);
+}
+
+.layers__base {
+    background: url('../assets/img/base.png') center center/cover no-repeat;
+    transform: translate3d(0, calc(var(--scroll-top) / 1.5), 0);
+    z-index: 0;
+}
+.layers__middle {
+    background: url('../assets/img/middle.png') center center/cover no-repeat;
+    transform: translate3d(0, calc(var(--scroll-top) / 2.5), 0);
+}
+.layers__front {
+    background: url('../assets/img/front.png') center center/cover no-repeat;
+    transform: translate3d(0, calc(var(--scroll-top) / 5.5), 0);
 }
 
 .article {
@@ -51,6 +101,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+	color: var(--text-color);
 }
 
 .article__title {
@@ -59,13 +110,4 @@ body {
 
 .article__paragraph {
     max-width: 460px;
-}
-.layers__base {
-    background: url('../assets/img/base.png') center center/cover no-repeat;
-}
-.layers__middle {
-    background: url('../assets/img/middle.png') center center/cover no-repeat;
-}
-.layers__front {
-    background: url('../assets/img/front.png') center center/cover no-repeat;
 }
