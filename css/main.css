@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
 }
 
 :root {
@@ -23,6 +22,7 @@
 body {
     background: #3c3c3c;
     font-family: Railway_Regular, sans-serif;
+	line-height: 1.5;
 }
 
 .header {
@@ -64,17 +64,16 @@ body {
     will-change: transform;
 	text-shadow: 0 0 15px #bf9306;
 	color: var(--text-color);
+    font-family: Railway_Black;
 }
 
 .layers__inscription {
-    font-family: Railway_Black;
     font-size: calc(var(--index) / 1.18);
     letter-spacing: calc(var(--index) / 3.5);
 	margin-top: calc(var(--index) * -0.75);
 }
 
 .layers__title {
-    font-family: Railway_Black;
     font-size: calc(var(--index) * 2.5);
     letter-spacing: calc(var(--index) / 2.25);
 }
@@ -102,12 +101,31 @@ body {
     align-items: center;
     text-align: center;
 	color: var(--text-color);
+    position: relative;
+    --article-transform: translate3d(0, calc(var(--scroll-top) / -7.5), 0);
 }
 
 .article__title {
     text-transform: uppercase;
+    font-size: calc(var(--index) * 1.8);
+    letter-spacing: calc(var(--index) / 7);
+    transform: var(--article-transform);
+    will-change: transform;
+    font-family: Railway_Black;
 }
 
 .article__paragraph {
-    max-width: 460px;
+    max-width: calc(var(--index) * 30);
+    font-size: calc(var(--index) * 0.85);
+	margin-top: calc(var(--index) / 1.2);
+    transform: var(--article-transform);
+    will-change: transform;
+}
+
+.article__copy {
+    position: absolute;
+    bottom: calc(var(--index) * 2.5);
+    opacity: 0.45;
+    font-size: calc(var(--index) * 0.7);
+    letter-spacing: calc(var(--index) / 25);
 }
