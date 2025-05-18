@@ -1,14 +1,34 @@
-# Fairy Forest with Parallax
+# Parallax forest
 
-## Description
-I found the idea for this project in one of the tutorials on [WebDesign Master](https://www.youtube.com/watch?v=F5ZKI-g-_qo) YouTube channel. This is a beautiful site with a paralax effect when scrolling.
+### 🗨️ Description
 
-### Here you can try this project on the website - [Fairy Forest with Parallax](https://nathanbailie.github.io/Fairy-Forest-with-Parallax/ "Click to visit")
+This is a parallax scrolling effect website with animated particles and smooth transitions. The project demonstrates modern web animation techniques using GSAP library and features a magical forest theme with multiple parallax layers. This project was created following a tutorial from the [WebDesign Master](https://www.youtube.com/watch?v=GLbI7BGdQ3o) YouTube channel.
 
-## Screenshot
-<img src="https://github.com/NathanBailie/Fairy-Forest-with-Parallax/raw/main/assets/screenshots/screenshot1.png" width="700" />
+---
 
-## Technologies
-* Html (canvas)
-* CSS (css-variables, flex)
-* JavaScript (working with DOM, GSAP js library)
+### 🛠️ Tech Stack
+
+- Html (semantic markup, BEM methodology)
+- SCSS (flexbox, grid, CSS animations, CSS variables)
+- JavaScript (DOM manipulation, GSAP animations, parallax effects)
+- Gulp (task automation, SCSS compilation, file optimization)
+
+---
+
+### 📱 Project website
+
+#### You can watch this project here - [Click!](https://nathanbailie.github.io/parallax-forest/ 'Click to visit')
+
+---
+
+### 🚀 Project launch
+
+- `npm install` - install dependencies
+- `npm run dev`- lunch the project in dev mode
+- `npm run build` - performs the final build of the project
+
+---
+
+### 🏞️ Screenshots
+
+<img src="https://github.com/NathanBailie/parallax-forest/raw/main/src/assets/screenshots/sc1.png" width="700" />

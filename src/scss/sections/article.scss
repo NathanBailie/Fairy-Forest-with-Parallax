@@ -1,0 +1,41 @@
+.article {
+	min-height: 100vh;
+	background: url('../assets/img/dungeon.jpg') center center/cover no-repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: var(--text-color);
+	position: relative;
+	--article-transform: translate3d(0, calc(var(--scroll-top) / -7.5), 0);
+	text-shadow: 0 0 15px #166a63;
+
+	&__title {
+		text-transform: uppercase;
+		font-size: calc(var(--index) * 1.8);
+		letter-spacing: calc(var(--index) / 7);
+		transform: var(--article-transform);
+		will-change: transform;
+		font-family: Railway_Black;
+		transition: var(--transition);
+	}
+
+	&__paragraph {
+		max-width: calc(var(--index) * 30);
+		font-size: calc(var(--index) * 0.85);
+		margin-top: calc(var(--index) / 1.2);
+		transform: var(--article-transform);
+		will-change: transform;
+		transition: var(--transition);
+	}
+
+	&__copy {
+		position: absolute;
+		bottom: calc(var(--index) * 2.5);
+		opacity: 0.45;
+		font-size: calc(var(--index) * 0.7);
+		letter-spacing: calc(var(--index) / 25);
+		transition: var(--transition);
+	}
+}

@@ -1,0 +1,25 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: #3c3c3c;
+	font-family: Railway_Regular, sans-serif;
+	line-height: 1.5;
+}
+
+.content {
+	will-change: transform;
+}
+
+.particles {
+	position: absolute;
+	inset: 0;
+	z-index: 1001;
+}

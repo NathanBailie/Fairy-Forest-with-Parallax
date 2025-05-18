@@ -1,0 +1,21 @@
+// libs
+@use "../assets/css-libs/normalize.min.css" as *;
+
+// helpers
+@use "./base/variables.scss" as *;
+@use "./base/mixins.scss" as *;
+@use "./base/base_styles.scss" as *;
+
+// sections
+@use "sections/header.scss" as *;
+@use "sections/article.scss" as *;
+
+@font-face {
+	font-family: Railway_Black;
+	src: url('../assets/fonts/raleway-black.woff2');
+}
+
+@font-face {
+	font-family: Railway_Regular;
+	src: url('../assets/fonts/raleway-regular.woff2');
+}

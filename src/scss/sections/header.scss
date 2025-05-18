@@ -1,0 +1,71 @@
+.header {
+	position: relative;
+
+	&::after {
+		content: '';
+		width: 100%;
+		height: calc(var(--index) * 10);
+		position: absolute;
+		bottom: calc(var(--index) * -4.5);
+		z-index: 100;
+		background: url('../assets/img/ground.png') center center/cover no-repeat;
+	}
+}
+
+.layers {
+	height: 100vh;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	overflow: hidden;
+
+	&__text {
+		z-index: 1000;
+		transform: translate3d(0, calc(var(--scroll-top) / 2), 0);
+		text-transform: uppercase;
+		will-change: transform;
+		text-shadow: 0 0 15px #bf9306;
+		color: var(--text-color);
+		font-family: Railway_Black;
+		transition: var(--transition);
+		position: relative;
+	}
+
+	&__inscription {
+		font-size: calc(var(--index) / 1.18);
+		letter-spacing: calc(var(--index) / 3.5);
+		margin-top: calc(var(--index) * -0.75);
+	}
+
+	&__title {
+		font-size: calc(var(--index) * 2.5);
+		letter-spacing: calc(var(--index) / 2.25);
+	}
+
+	&__base {
+		background: url('../assets/img/base.png') center center/cover no-repeat;
+		transform: translate3d(0, calc(var(--scroll-top) / 1.5), 0);
+		z-index: 0;
+	}
+
+	&__middle {
+		background: url('../assets/img/middle.png') center center/cover no-repeat;
+		transform: translate3d(0, calc(var(--scroll-top) / 2.5), 0);
+	}
+
+	&__front {
+		background: url('../assets/img/front.png') center center/cover no-repeat;
+		transform: translate3d(0, calc(var(--scroll-top) / 5.5), 0);
+	}
+}
+
+.layer {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	will-change: transform;
+	z-index: 2;
+	transition: var(--transition);
+}
